@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarpay Services - Universal</title>
+    <style>
+        /* Asosiy sozlamalar */
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #f4f7f6; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6;
+        }
+
+        /* Sarlavha */
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .main-logo {
+            width: 80px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        h1 { margin: 0; font-size: 24px; color: #333; }
+
+        /* Konteyner */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Operatorlar to'plami (Grid) */
+        .operator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Karta dizayni */
+        details {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e1e1e1;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        details[open] {
+            border-color: #007bff;
+            box-shadow: 0 10px 20px rgba(0,123,255,0.1);
+        }
+
+        summary {
+            padding: 25px;
+            list-style: none;
+            cursor: pointer;
+            text-align: center;
+            outline: none;
+        }
+        summary::-webkit-details-marker { display: none; }
+        
+        summary img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        summary h3 { margin: 10px 0 5px; font-size: 22px; color: #222; }
+        summary p { margin: 0; color: #777; font-size: 14px; }
+
+        /* Tariflar jadvali */
+        .tariff-content {
+            padding: 20px;
+            background-color: #fafafa;
+            border-top: 1px solid #eee;
+        }
+        .tariff-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .tariff-table th, .tariff-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .tariff-table th { background: #007bff; color: white; }
+
+        .back-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .back-btn:hover { background: #e84118; }
+
+        /* Aloqa bo'limi */
+        footer {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        .contact-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 24px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border: 2px solid #007bff;
+            border-radius: 50px;
+            transition: 0.3s;
+            margin-bottom: 25px;
+        }
+        .contact-link:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Instagram QR rasm uchun stil */
+        .instagram-qr {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .operator-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 20px; }
+            summary img { width: 70px; height: 70px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="photo_2026-04-15_20-06-11.jpg" alt="Logo" class="main-logo">
+            <h1>SARPAY SERVICES</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="operator-grid">
+            
+            <details>
+                <summary>
+                    <img src="i (1).webp" alt="Beeline">
+                    <h3>Beeline</h3>
+                    <p>Eng ommabop tariflar</p>
+                </summary>
+                <div class="tariff-content">
+                    <table class="tariff-table">
+                        <tr><th>Tarif</th><th>Narxi</th><th>Resurs</th></tr>
+                        <tr><td>Oila Start</td><td>100 000</td><td>100 GB</td></tr>
+                        <tr><td>Status Silver</td><td>90 000</td><td>50 GB</td></tr>
+                    </table>
+                    <button class="back-btn" onclick="this.closest('details').removeAttribute('open')">Yopish</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <img src="загрузка (1).png" alt="Humans">
+                    <h3>Humans</h3>
+                    <p>Cheksiz imkoniyatlar</p>
+                </summary>
+                <div class="tariff-content">
+                    <table class="tariff-table">
+                        <tr><th>Tarif</th><th>Narxi</th><th>Resurs</th></tr>
+                        <tr><td>Cheksiz</td><td>95 000</td><td>Hammasi ∞</td></tr>
+                        <tr><td>Tekin</td><td>0</td><td>TG bepul</td></tr>
+                    </table>
+                    <button class="back-btn" onclick="this.closest('details').removeAttribute('open')">Yopish</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <img src="загрузка (2).png" alt="Uztelecom">
+                    <h3>Uztelecom</h3>
+                    <p>Milliy aloqa operatori</p>
+                </summary>
+                <div class="tariff-content">
+                    <table class="tariff-table">
+                        <tr><th>Tarif</th><th>Narxi</th><th>Resurs</th></tr>
+                        <tr><td>Super Salom</td><td>70 000</td><td>100 GB</td></tr>
+                        <tr><td>Ideal Plus</td><td>85 000</td><td>150 GB</td></tr>
+                    </table>
+                    <button class="back-btn" onclick="this.closest('details').removeAttribute('open')">Yopish</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <img src="i.webp" alt="Ucell">
+                    <h3>Ucell</h3>
+                    <p>Yorqin hayot tariflari</p>
+                </summary>
+                <div class="tariff-content">
+                    <table class="tariff-table">
+                        <tr><th>Tarif</th><th>Narxi</th><th>Resurs</th></tr>
+                        <tr><td>Doimiy 50</td><td>50 000</td><td>30 GB</td></tr>
+                        <tr><td>Ovoz Start</td><td>20 000</td><td>500 daq</td></tr>
+                    </table>
+                    <button class="back-btn" onclick="this.closest('details').removeAttribute('open')">Yopish</button>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <img src="загрузка.png" alt="Mobiuz">
+                    <h3>Mobiuz</h3>
+                    <p>Sifatli mobil internet</p>
+                </summary>
+                <div class="tariff-content">
+                    <table class="tariff-table">
+                        <tr><th>Tarif</th><th>Narxi</th><th>Resurs</th></tr>
+                        <tr><td>Shunchaki 50</td><td>66 000</td><td>50 GB</td></tr>
+                        <tr><td>Mazza 2.0</td><td>65 000</td><td>80 GB</td></tr>
+                    </table>
+                    <button class="back-btn" onclick="this.closest('details').removeAttribute('open')">Yopish</button>
+                </div>
+            </details>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2>Murojaat uchun:</h2>
+            <a href="tel:+998912135051" class="contact-link">+998 91 213 50 51</a>
+            <br>
+            <img src="IMG_6137.JPEG" alt="Instagram @SARPAY50" class="instagram-qr">
+        </div>
+    </footer>
+
+</body>
+</html>
